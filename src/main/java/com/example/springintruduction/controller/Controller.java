@@ -3,7 +3,7 @@ package com.example.springintruduction.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import services.DayCalculator;
+import com.example.springintruduction.services.DayCalculator;
 
 @RestController
 public class Controller {
@@ -20,7 +20,7 @@ public class Controller {
 
     @GetMapping("/erDetFredag")
     public String erDetFredag() {
-        DayCalculator calculator=new DayCalculator();
+        DayCalculator calculator = new DayCalculator();
         return calculator.isItFriday();
     }
 }
